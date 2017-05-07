@@ -15,7 +15,7 @@ Item IDs that have unique glows
 57000	Seren's Relic Piece
 91115	Tithus's Relic Piece
 91117	Zuras's Relic Piece
-98260	Vergos's Head
+98260	Vergos's Head			// Vergo pieces all have the same effect
 98263	Vergos's Horn
 98262	Vergos's Scale
 98264	Vergos's Bone
