@@ -12,7 +12,7 @@ Commands are not case-sensitive. [slash](https://github.com/baldera-mods/slash) 
 * You have to be present for the markers to spawn.
 
 ## Info:
-* No you cannot pickup the item, it's fake. Spawned client-side just for the visual effect to easily find dead people. Also only you can see it.
+* No you cannot pickup the item, it's fake. Spawned client-side just for the visual effect and only you can see them.
 * Any item can be spawned, such as relic pieces which have different visual effects. See index.js for list.
 
 
