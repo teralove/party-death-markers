@@ -139,7 +139,8 @@ module.exports = function PartyDeathMarkers(dispatch) {
 		}
     }
     dispatch.hook('C_CHAT', 1, chatHook)	
-	
+	dispatch.hook('C_WHISPER', 1, chatHook)
+  
 	function toggleModule() {
 		enabled = !enabled;
 		if (!enabled) removeAll();
