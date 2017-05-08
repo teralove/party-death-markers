@@ -8,6 +8,7 @@ Spawns large visible markers on top of dead party members.
 Commands are not case-sensitive. [slash](https://github.com/baldera-mods/slash) is supported but not required
 
 ### Known issues:
+* Sometimes a marker will not spawn directly on top of a body.
 * If you logout, any present markers will be removed. 
 * When someone dies, you have to be present for the markers to spawn.
 
