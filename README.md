@@ -2,8 +2,8 @@
 Spawns large visible markers on top of dead party members.
 
 ### Chat commands:
-* !PartyDeathMarkers    - Toggles the module off/on
-* !ClearDeathMarkers    - Removes all present markers
+* **!PartyDeathMarkers**    - Toggles the module off/on
+* **!ClearDeathMarkers**    - Removes all present markers
 
 Commands are not case-sensitive. [slash](https://github.com/baldera-mods/slash) is supported but not required
 
