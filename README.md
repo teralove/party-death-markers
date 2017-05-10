@@ -1,3 +1,5 @@
+## !!! (WIP) Early version, can not recommend using this yet, not until crucial bug with positioning is fixed !!!
+
 # Party Death Markers
 Spawns large visible markers on top of dead party members.
 
