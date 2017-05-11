@@ -1,4 +1,4 @@
-### New version 1.1 - Fixes the issue of markers spawning on wrong positions. You'll need to update your [tera-data](https://github.com/meishuu/tera-data) files if they are older than May 10, 2017 (Specifically you need S_DEAD_LOCATION.1.def)
+**New version 1.1 - Fixes the issue of markers spawning on wrong positions. You'll need to update your [tera-data](https://github.com/meishuu/tera-data) files if they are older than May 10, 2017 (Specifically you need S_DEAD_LOCATION.1.def)**
 
 
 # Party Death Markers
