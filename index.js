@@ -1,4 +1,4 @@
-// vers 1.0.0
+// vers 1.1.0
 
 /*
 Item IDs that have unique glows
@@ -54,33 +54,37 @@ module.exports = function PartyDeathMarkers(dispatch) {
 			}
 		}
     })
-
-    dispatch.hook('S_USER_LOCATION', 1, (event) => {
-		if (!enabled) return;
-		for(let i in partyMembers) {
-			if (partyMembers[i].cid - event.target === 0) {				
-				partyMembers[i].x = event.x1;
-				partyMembers[i].y = event.y1;
-				partyMembers[i].z = event.z1;
-				return;
-			}
-		}
-    })
 		
-	dispatch.hook('S_PARTY_MEMBER_STAT_UPDATE', 2, (event) => {	
+ 	dispatch.hook('S_DEAD_LOCATION', 1, (event) => {
+		 if (!enabled) return;
+		 for(let i in partyMembers) {
+			 if (partyMembers[i].cid - event.target == 0) {	
+				 partyMembers[i].x = event.x;
+				 partyMembers[i].y = event.y;
+				 partyMembers[i].z = event.z;
+				 spawnMarker(partyMembers[i].playerId);
+			 }
+		}
+	})
+	 		
+	dispatch.hook('S_PARTY_MEMBER_STAT_UPDATE', 2, (event) => {
 		if (!enabled || event.playerId == userId) return;
 		if (event.curHp <= 0) {
 			spawnMarker(event.playerId);
-		}
-		else if (event.curHp > 0) {
+		} else {
 			removeMarker(event.playerId);
 		}
 	})
-	 
+		 
 	function spawnMarker(playerId) {	
-		if (deadPeople.includes(playerId)) return;
-		deadPeople.push(playerId);	
-		
+		if (deadPeople.includes(playerId)) {
+			dispatch.toClient('S_DESPAWN_DROPITEM', 1, {
+				id: playerId
+			});	
+		} else {
+			deadPeople.push(playerId);	
+		}
+			
 		let index = getIndexOfPlayerId(partyMembers, playerId);
 		
 		dispatch.toClient('S_SPAWN_DROPITEM', 1, {
@@ -99,7 +103,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
 		if (deadPeople.includes(playerId)) {
 			let index = deadPeople.indexOf(playerId);
 			deadPeople.splice(index, 1);
-				
+			
 			dispatch.toClient('S_DESPAWN_DROPITEM', 1, {
 				id: playerId
 			});	
@@ -114,7 +118,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
 	
 	function getIndexOfPlayerId(arr, playerId) {
 		for (var i=0; i<arr.length; i++) {
-			if (arr[i].playerId-playerId===0) return i;
+			if (arr[i].playerId-playerId==0) return i;
 		}
 		return -1;
 	}
