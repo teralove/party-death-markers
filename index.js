@@ -1,4 +1,4 @@
-// vers 1.1.0
+// vers 1.1.1
 
 /*
 Item IDs that have unique glows
@@ -63,15 +63,14 @@ module.exports = function PartyDeathMarkers(dispatch) {
 				 partyMembers[i].y = event.y;
 				 partyMembers[i].z = event.z;
 				 spawnMarker(partyMembers[i].playerId);
+				 return;
 			 }
 		}
 	})
 	 		
 	dispatch.hook('S_PARTY_MEMBER_STAT_UPDATE', 2, (event) => {
 		if (!enabled || event.playerId == userId) return;
-		if (event.curHp <= 0) {
-			spawnMarker(event.playerId);
-		} else {
+		if (event.curHp > 0) { {
 			removeMarker(event.playerId);
 		}
 	})
