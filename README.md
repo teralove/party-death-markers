@@ -20,7 +20,7 @@ Commands are not case-sensitive. [slash](https://github.com/baldera-mods/slash) 
 
 ## Changelog 
 ### 1.1.1
-* [+] Optimizated a couple functions
+* [+] Optimized a couple functions
 ### 1.1.0
 * [+] Fixed bug with markers spawning on wrong positions
 
