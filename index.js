@@ -70,7 +70,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
 	 		
 	dispatch.hook('S_PARTY_MEMBER_STAT_UPDATE', 2, (event) => {
 		if (!enabled || event.playerId == userId) return;
-		if (event.curHp > 0) { {
+		if (event.curHp > 0) {
 			removeMarker(event.playerId);
 		}
 	})
