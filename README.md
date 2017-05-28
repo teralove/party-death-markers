@@ -1,4 +1,4 @@
-**New version 1.1 - Fixes the issue of markers spawning on wrong positions. You'll need to update your [tera-data](https://github.com/meishuu/tera-data) files if they are older than May 10, 2017 (Specifically you need S_DEAD_LOCATION.1.def)**
+**New version 1.2 - Specific markers/beacons can be spawned for each class. This helps to identify and prioritize ressing piles of dead bodies. Tanks will spawn a Red relic piece, Healers will spawn a Blue relic piece, DPS will spawn the large rare item beacon. If you wish for all classes to be the large rare beacon like how this mod originally was, then open the index.js and change to variable "useJobSpecificMarkers" to false (const useJobSpecificMarkers = false;)
 
 
 # Party Death Markers
@@ -19,6 +19,8 @@ Commands are not case-sensitive. [slash](https://github.com/baldera-mods/slash) 
 * Any item can be spawned, such as relic pieces which have different visual effects. See index.js for list.
 
 ## Changelog 
+### 1.2.0
+* [+] Added class specific markers
 ### 1.1.1
 * [+] Optimized a couple functions
 ### 1.1.0
