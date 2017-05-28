@@ -1,4 +1,4 @@
-**New version 1.2 - Specific markers/beacons can be spawned for each class. This helps to identify and prioritize ressing piles of dead bodies. Tanks will spawn a Red relic piece, Healers will spawn a Blue relic piece, DPS will spawn the large rare item beacon. If you wish for all classes to be the large rare beacon like how this mod originally was, then open the index.js and change to variable "useJobSpecificMarkers" to false (const useJobSpecificMarkers = false;)
+**New version 1.2 - Specific markers/beacons can be spawned for each class. This helps to identify and prioritize ressing piles of dead bodies. Tanks will spawn a Red relic piece, Healers will spawn a Blue relic piece, DPS will spawn the large rare item beacon. If you wish for all classes to be the large rare beacon like how this mod originally was, then open the index.js and change to variable "useJobSpecificMarkers" to false (const useJobSpecificMarkers = false;)**
 
 
 # Party Death Markers
