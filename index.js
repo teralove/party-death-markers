@@ -1,4 +1,4 @@
-// vers 1.1.1
+// vers 1.2.0
 
 /*
 Item IDs that have unique glows
@@ -22,6 +22,25 @@ Item IDs that have unique glows
 98261	Vergos's Fang
 */
 const ItemToSpawn = 98260;
+const useJobSpecificMarkers = true;
+/*
+warrior = 0, lancer = 1, slayer = 2, berserker = 3,
+sorcerer = 4, archer = 5, priest = 6, mystic = 7,
+reaper = 8, gunner = 9, brawler = 10, ninja = 11,
+valkyrie = 12
+*/
+const jobSpecificMarkers = [	
+	{
+		// tanks
+		jobs: [1, 10], 
+		marker: 91177
+	},
+	{
+		// healers
+		jobs: [6, 7], 
+		marker: 91113
+	},	
+];
 
 const format = require('./format.js');
 
@@ -47,6 +66,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
 				partyMembers.push({
 					cid: event.members[i].cID,
 					playerId: event.members[i].playerId,
+					job: event.members[i].class,
 					x: 0,
 					y: 0,
 					z: 0
@@ -91,7 +111,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
 			x: partyMembers[index].x,
 			y: partyMembers[index].y,
 			z: partyMembers[index].z,
-			item: ItemToSpawn,
+			item: getSpawnItem(partyMembers[index].job),
 			amount: 1,
 			expiry: 999999,
 			owners: [{id: userId}]
@@ -122,13 +142,25 @@ module.exports = function PartyDeathMarkers(dispatch) {
 		return -1;
 	}
 	
-    dispatch.hook('S_LEAVE_PARTY_MEMBER', 2, (event) => {
+	
+	function getSpawnItem(jobId) {
+		if (useJobSpecificMarkers) {
+			for(let i in jobSpecificMarkers) {
+				if (jobSpecificMarkers[i].jobs.includes(jobId))
+					return jobSpecificMarkers[i].marker;
+			}		
+		}
+		
+		return ItemToSpawn;		
+	}
+	
+	dispatch.hook('S_LEAVE_PARTY_MEMBER', 2, (event) => {
 		removeMarker(event.playerId);
-    })	
+	})	
 	
     dispatch.hook('S_LEAVE_PARTY', 1, (event) => {
 		removeAll();
-    })	
+	})	
 	
     const chatHook = event => {		
 		let command = format.stripTags(event.message).split(' ');
@@ -140,8 +172,8 @@ module.exports = function PartyDeathMarkers(dispatch) {
 			toggleModule();
 			return false;
 		}
-    }
-    dispatch.hook('C_CHAT', 1, chatHook)	
+	}
+	dispatch.hook('C_CHAT', 1, chatHook)	
 	dispatch.hook('C_WHISPER', 1, chatHook)
   
 	function toggleModule() {
@@ -160,16 +192,18 @@ module.exports = function PartyDeathMarkers(dispatch) {
 		// do nothing because slash is optional
 	}
 	
+	
 	function systemMsg(msg) {
-        dispatch.toClient('S_CHAT', 1, {
-            channel: 24,
-            authorID: 0,
-            unk1: 0,
-            gm: 0,
-            unk2: 0,
-            authorName: '',
-            message: ' (party-death-markers) ' + msg
-        });
-    }
-			
+		dispatch.toClient('S_CHAT', 1, {
+			channel: 24,
+			authorID: 0,
+			unk1: 0,
+			gm: 0,
+			unk2: 0,
+			authorName: '',
+		message: ' (party-death-markers) ' + msg
+		});
+	}
+	
+	
 }
