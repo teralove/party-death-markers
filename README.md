@@ -12,7 +12,7 @@ Commands are not case-sensitive. [slash](https://github.com/baldera-mods/slash) 
 * When someone dies, you have to be present for the markers to spawn.
 
 ## Info:
-* Tanks = red relic piece. Healers = blue relic piene. DPS = tall rare item beacon.
+* Tanks = red relic piece. Healers = blue relic piece. DPS = tall rare item beacon.
 * No you cannot pickup the item, it's fake. Spawned client-side just for the visual effect and only you can see them.
 * Any item can be spawned, such as relic pieces which have different visual effects. See index.js for list.
 
