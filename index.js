@@ -48,7 +48,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
     })
     
     dispatch.hook('S_DEAD_LOCATION', 2, (event) => {
-        for (i = 0; i < partyMembers.length; i++) { 
+        for (let i = 0; i < partyMembers.length; i++) { 
             if (partyMembers[i].gameId.equals(event.gameId)) {
                 spawnMarker(partyMembers[i].playerId, event.loc);
                 return;
@@ -58,7 +58,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
     
     dispatch.hook('S_SPAWN_USER', 13, (event) => {
         if (!event.alive) {
-            for (i = 0; i < partyMembers.length; i++) { 
+            for (let i = 0; i < partyMembers.length; i++) { 
                 if (partyMembers[i].gameId.equals(event.gameId)) {
                     spawnMarker(partyMembers[i].playerId, event.loc);
                     return;
@@ -71,7 +71,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
         if (playerId == event.playerId) return;
         
         if (event.curHp > 0 || !event.online) {
-            for (i = 0; i < partyMembers.length; i++) { 
+            for (let i = 0; i < partyMembers.length; i++) { 
                 if (partyMembers[i].playerId == event.playerId) {
                     removeMarker(event.playerId);
                     return;
@@ -82,7 +82,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
     
         
     dispatch.hook('S_LEAVE_PARTY_MEMBER', 2, (event) => {
-        for (i = 0; i < partyMembers.length; i++) {
+        for (let i = 0; i < partyMembers.length; i++) {
             if (partyMembers[i].playerId == event.playerId) {
                 removeMarker(partyMembers[i].gameId);
             }
@@ -128,7 +128,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
     }
     
     function removeAllMarkers() {
-        for (i = 0; i < spawnedBeacons.length; i++) { 
+        for (let i = 0; i < spawnedBeacons.length; i++) { 
             removeMarker(spawnedBeacons[i]);
         }
         spawnedBeacons = [];
@@ -137,13 +137,13 @@ module.exports = function PartyDeathMarkers(dispatch) {
     function getSpawnItem(id) {
         if (UseJobSpecificMarkers) {
             let jobId;
-            for (i = 0; i < partyMembers.length; i++) { 
+            for (let i = 0; i < partyMembers.length; i++) { 
                 if (partyMembers[i].playerId == id) {
                     jobId = partyMembers[i].class;
                 }
             }
             
-            for (i = 0; i < JobSpecificMarkers.length; i++) { 
+            for (let i = 0; i < JobSpecificMarkers.length; i++) { 
                 if (JobSpecificMarkers[i].jobs.includes(jobId)) {
                     return JobSpecificMarkers[i].marker;
                 }
