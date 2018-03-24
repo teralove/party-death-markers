@@ -34,4 +34,5 @@ tera-proxy module that spawns large beacons on top of dead party members.
     </details>
 
 ---
+
 ![Screenshot](http://i.imgur.com/bOSA6Lx.jpg)
