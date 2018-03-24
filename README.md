@@ -13,6 +13,8 @@ tera-proxy module that spawns large beacons on top of dead party members.
 ## Changelog
 <details>
 
+    1.31
+    - Supports Caali's proxy auto-updater
     1.30
     - Updated code aesthetics
     - Fixed bug with beacons spawning on players no longer in party.

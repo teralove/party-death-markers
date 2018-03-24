@@ -1,13 +1,3 @@
-/* 
-OPCODE REQUIRED :
-- S_LOGIN
-- S_PARTY_MEMBER_LIST
-- S_DEAD_LOCATION
-- S_SPAWN_USER
-- S_PARTY_MEMBER_STAT_UPDATE
-- S_LEAVE_PARTY_MEMBER
-- S_LEAVE_PARTY
-*/
 const Command = require('command');
 
 module.exports = function PartyDeathMarkers(dispatch) {

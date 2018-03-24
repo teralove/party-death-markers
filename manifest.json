@@ -1,0 +1,18 @@
+{
+  "files": {
+    "index.js": "38c4a05ad07f30fbda56ba738c7d1a378852bd50e12a6550679e98b28c6b9ab6",
+    "module.json": "cfb449272f2edac932ec0f20f4322b352d1c95e14aac74ea4976f8e70667e7ec",
+    "README.md": "ba95db504151594a4c59c69ac2ab27205fb99f5b647f7e145c083fdce9188435"
+  },
+    "defs": {
+        "S_LOGIN": 9,
+        "S_PARTY_MEMBER_LIST": 6,
+        "S_DEAD_LOCATION": 2,
+        "S_SPAWN_USER": 13,
+        "S_PARTY_MEMBER_STAT_UPDATE": 2,
+        "S_LEAVE_PARTY_MEMBER": 2,
+        "S_LEAVE_PARTY": 1,
+        "S_DESPAWN_DROPITEM": 4,
+        "S_SPAWN_DROPITEM": 6
+    }
+}
