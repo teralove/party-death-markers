@@ -31,7 +31,8 @@ tera-proxy module that spawns large beacons on top of dead party members.
     - Optimized a couple functions
     1.10
     - Fixed bug with markers spawning on wrong positions
-    </details>
+
+</details>
 
 ---
 
