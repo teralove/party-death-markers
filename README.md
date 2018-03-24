@@ -13,13 +13,11 @@ tera-proxy module that spawns large beacons on top of dead party members.
 ## Changelog
 <details>
 
-    1.40
+    1.30
     - Updated code aesthetics
     - Fixed bug with beacons spawning on players no longer in party.
     - Added S_SPAWN_USER hook. Fixes issues with beacons not spawning.
-    1.31
     - Removed ClearDeathMarkers command
-    1.30
     - Added Command dependency
     - Removed slash support
     1.20
