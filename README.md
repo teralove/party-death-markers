@@ -1,9 +1,6 @@
 # party-death-markers
 tera-proxy module that spawns large beacons on top of dead party members.
 
-## Dependency
-- `Command` module
-
 ## Usage
 ### `PartyDeathMarkers`
 - Toggle on/off
