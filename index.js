@@ -28,7 +28,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
     let partyMembers = [];
     let spawnedBeacons = [];
     
-    dispatch.hook('S_LOGIN', 9, (event) => {
+    dispatch.hook('S_LOGIN', 10, (event) => {
         playerId = event.playerId;
         removeAllMarkers();
     })
@@ -60,7 +60,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
     dispatch.hook('S_PARTY_MEMBER_STAT_UPDATE', 2, (event) => {
         if (playerId == event.playerId) return;
         
-        if (event.curHp > 0 || !event.online) {
+        if (event.curHp > 0) {
             for (let i = 0; i < partyMembers.length; i++) { 
                 if (partyMembers[i].playerId == event.playerId) {
                     removeMarker(event.playerId);
@@ -70,7 +70,6 @@ module.exports = function PartyDeathMarkers(dispatch) {
         }
     })
     
-        
     dispatch.hook('S_LEAVE_PARTY_MEMBER', 2, (event) => {
         for (let i = 0; i < partyMembers.length; i++) {
             if (partyMembers[i].playerId == event.playerId) {
@@ -88,13 +87,8 @@ module.exports = function PartyDeathMarkers(dispatch) {
         if (!enabled) return;
         if (playerId == id) return;
         
-        if (spawnedBeacons.includes(id)) {
-            dispatch.toClient('S_DESPAWN_DROPITEM', 4, {
-                gameId: id
-            });
-        } else {
-            spawnedBeacons.push(id);
-        }
+        removeMarker(id); //refresh
+        spawnedBeacons.push(id);
         
         dispatch.toClient('S_SPAWN_DROPITEM', 6, {
             gameId: id,
@@ -103,7 +97,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
             amount: 1,
             expiry: 999999,
             owners: [{playerId: playerId}]
-        });	
+        });
     }
     
     function removeMarker(id) {
@@ -143,14 +137,10 @@ module.exports = function PartyDeathMarkers(dispatch) {
         return DefaultItemSpawn;
     }
     
-    function toggleModule() {
+    command.add('partydeathmarkers', () => {
         enabled = !enabled;
         if (!enabled) removeAllMarkers();
         command.message('(party-death-markers) ' + (enabled ? 'enabled' : 'disabled'));
-    }
-    
-    command.add('partydeathmarkers', () => {
-        toggleModule()
     });
     
 }
