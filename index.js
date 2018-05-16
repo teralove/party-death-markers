@@ -57,7 +57,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
         }
     })
     
-    dispatch.hook('S_PARTY_MEMBER_STAT_UPDATE', 2, (event) => {
+    dispatch.hook('S_PARTY_MEMBER_STAT_UPDATE', 3, (event) => {
         if (playerId == event.playerId) return;
         
         if (event.curHp > 0) {
