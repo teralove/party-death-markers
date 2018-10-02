@@ -6,7 +6,7 @@
   },
     "defs": {
         "S_LOGIN": 10,
-        "S_PARTY_MEMBER_LIST": 6,
+        "S_PARTY_MEMBER_LIST": 7,
         "S_DEAD_LOCATION": 2,
         "S_SPAWN_USER": 13,
         "S_PARTY_MEMBER_STAT_UPDATE": 3,

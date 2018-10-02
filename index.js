@@ -33,7 +33,7 @@ module.exports = function PartyDeathMarkers(dispatch) {
         removeAllMarkers();
     })
         
-    dispatch.hook('S_PARTY_MEMBER_LIST', 6, (event) => {
+    dispatch.hook('S_PARTY_MEMBER_LIST', 7, (event) => {
         partyMembers = event.members;
     })
     
