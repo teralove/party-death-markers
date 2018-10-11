@@ -2,9 +2,13 @@
 tera-proxy module that spawns large beacons on top of dead party members.
 
 ## Usage
-### `PartyDeathMarkers`
-- Toggle on/off
-- Default is on
+
+| Command | Description |
+|:-|:-|
+| `pdm toggle` | Toggles the module on/off. |
+| `pdm clear`  | Removes all present markers. |
+
+There is also a `partydeathmarkers` alias.
 
 ## Info
 - Tanks = red. Healers = blue. DPS = tall beacon.
