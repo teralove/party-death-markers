@@ -41,7 +41,7 @@ module.exports = function PartyDeathMarkers(mod) {
     removeMarker(member)
     markers.push(member.playerId)
 
-    mod.toClient('S_SPAWN_DROPITEM', 6, {
+    mod.toClient('S_SPAWN_DROPITEM', 7, {
       gameId: member.playerId,
       loc: loc,
       item: getMarker(member.class),
