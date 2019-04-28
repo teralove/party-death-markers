@@ -1,11 +1,14 @@
 {
     "disableAutoUpdate": false,
-	"name": "party-death-markers",
-	"author": "teralove",
-	"description": "Spawns large beacons on top of dead party members.",
-	"options": {
-		"niceName": "Party Death Markers"
-	},
+    "name": "party-death-markers",
+    "author": "teralove",
+    "description": "Spawns large beacons on top of dead party members.",
+    "version": "4/28/2019",
+    "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PXRFYB39SQP4A", 
+    "options": {
+        "niceName": "Party Death Markers"  
+    },    
+
     "servers": ["https://raw.githubusercontent.com/teralove/party-death-markers/master/"],
-    "supportUrl": "https://github.com/teralove/party-death-markers/blob/master/README.md"
+    "supportUrl": "https://github.com/teralove/party-death-markers/issues/"
 }
