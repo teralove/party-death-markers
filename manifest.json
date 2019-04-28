@@ -1,11 +1,10 @@
 {
   "files": {
-    "index.js": "0a7c90511a98601ce9322f45c1a5bec21a9018fa53caa54608363f814ef757fc",
-    "module.json": "4cf7e2bc013e9df029d09e70c2f43f7bfb4a45a63ee3c7361e88fd4715219738",
+    "index.js": "911ba6d1d218f2482c7c3c7261b901527ac511900f8d7bb2751d4364e24dc3d1",
+    "module.json": "15e4408adf2d1d4386fe867ac33b26e19931a193d098c9b7d774a999d5448165",
     "README.md": "b43e3e7d7b46b1f25847e57084ee70fb80dd8dde991dd2bb78837bb07430f17e"
   },
     "defs": {
-        "S_LOGIN": 10,
         "S_PARTY_MEMBER_LIST": 7,
         "S_DEAD_LOCATION": 2,
         "S_SPAWN_USER": 13,
