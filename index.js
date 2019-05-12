@@ -21,7 +21,7 @@ module.exports = function PartyDeathMarkers(mod) {
     if (mod.game.me.playerId === event.playerId)
       return
 
-    if (event.curHp > 0 && event.alive)
+    if (markers.length > 0 && event.alive && event.curHp > 0)
       removeMarker(members.find(member => member.playerId === event.playerId))
   })
 
