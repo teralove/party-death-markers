@@ -12,7 +12,7 @@ module.exports = function PartyDeathMarkers(mod) {
     spawnMarker(members.find(member => member.gameId === event.gameId), event.loc)
   })
 
-  mod.hook('S_SPAWN_USER', 14, event => {
+  mod.hook('S_SPAWN_USER', 15, event => {
     if (!event.alive)
       spawnMarker(members.find(member => member.gameId === event.gameId), event.loc)
   })

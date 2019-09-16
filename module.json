@@ -3,7 +3,7 @@
     "name": "party-death-markers",
     "author": "teralove",
     "description": "Spawn beacons on top of dead party members.",
-    "version": "5/12/2019",
+    "version": "9/16/2019",
     "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=PXRFYB39SQP4A", 
     "options": {
         "niceName": "Party Death Markers"  
