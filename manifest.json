@@ -1,13 +1,13 @@
 {
   "files": {
-    "index.js": "2cebd9f5d297b86036255c1a74ae35238008a0726e2d1235a393d0573d563303",
-    "module.json": "1f3ac261dd66fafbce1bffede62074ad8b331e55d8f65f75e56fe9ee49ede7e3",
+    "index.js": "404578d69b69ef084491204cd585c814bff596631357e7afa06eee06e8c1a8bc",
+    "module.json": "ec593ec65cb2923464fedfe144f5ee6de476c992cda249dd0531a174c9302bf0",
     "README.md": "b43e3e7d7b46b1f25847e57084ee70fb80dd8dde991dd2bb78837bb07430f17e"
   },
     "defs": {
         "S_PARTY_MEMBER_LIST": 7,
         "S_DEAD_LOCATION": 2,
-        "S_SPAWN_USER": 14,
+        "S_SPAWN_USER": 15,
         "S_PARTY_MEMBER_STAT_UPDATE": 3,
         "S_LEAVE_PARTY_MEMBER": 2,
         "S_LEAVE_PARTY": 1,
