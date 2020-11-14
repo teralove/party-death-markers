@@ -1,7 +1,7 @@
 {
     "files": {
         "README.md": "b43e3e7d7b46b1f25847e57084ee70fb80dd8dde991dd2bb78837bb07430f17e",
-        "index.js": "86540c2eceb5feac268d2b0896ae89fae03a430a39bb9a2801e32c88826b03fc",
+        "index.js": "f8ebdb0a4f71e882e080ba23335b54ae19aba67d5f346e90a841d746a21a1885",
         "module.json": "9f886bfc77e6f864cb08d609d98712bea51888915dc75ab45acb8339c0a82022"
     },
     "defs": {
@@ -11,7 +11,7 @@
         "S_LEAVE_PARTY_MEMBER": 2,
         "S_PARTY_MEMBER_LIST": 7,
         "S_PARTY_MEMBER_STAT_UPDATE": 3,
-        "S_SPAWN_DROPITEM": 8,
-        "S_SPAWN_USER": 15
+        "S_SPAWN_DROPITEM": 9,
+        "S_SPAWN_USER": 16
     }
 }
